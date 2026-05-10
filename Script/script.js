@@ -1,33 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad Fundamental 2 - 1997940 - XML</title>
-    <link rel="stylesheet" href="../Estilos/style.css">
-    <script src="https://kit.fontawesome.com/beccf43db1.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-
-    <div class="navegacion">
-        <a href="../AF07/AF07.html" class="btn"><i class="fa-solid fa-arrow-left"></i> AF07</a>
-        <a href="../index.html" class="btn">ㅤ<i class="fa-regular fa-house"></i>ㅤ</a>
-        <a href="AF04.html" class="btn">AF04 <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-
-    <div class="xml-contenedor">
-        <h2>Actividad Fundamental 2 - 1997940 - XML</h2>
-
-        <div id="vista-xml" class="visor-xml">Cargando información interactiva...</div>
-    </div>
-    <a href="" id="btnSubir">
-        <i class="fa-solid fa-arrow-up"></i>
-    </a>
-
-    <script>
-        const archivoXML = 'AF02-1997940.xml';
+const archivoXML = 'AF02-2024394.xml';
 
         fetch(archivoXML)
             .then(respuesta => respuesta.text())
@@ -134,7 +105,3 @@
                     behavior: "smooth"
                 });
             });
-    </script>
-</body>
-
-</html>
