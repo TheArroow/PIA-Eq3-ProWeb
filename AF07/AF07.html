@@ -32,11 +32,20 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            transition: background-color 0.3s;
+            transition: all 0.2s ease-in-out;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+            will-change: transform;
         }
 
         a.btn:hover {
             background-color: #1a252f;
+            cursor: pointer;
+            transform: scale(0.97) translateZ(0);
+        }
+
+        a.btn:active {
+            transform: scale(0.92) translateZ(0);
         }
 
         .xml-contenedor {
