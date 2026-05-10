@@ -1,0 +1,128 @@
+ <integrante nombre="Omar Joaquín Sosa Moreno - 1997940">
+        <!--  Lunes  -->
+        <clase>
+            <dia>Lunes</dia>
+            <hora>5:00 pm a 5:50 pm</hora>
+            <materia>BASDAT</materia>
+            <clave>006</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>5:50 pm a 6:40 pm</hora>
+            <materia>ORGEMP</materia>
+            <clave>010</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>6:40 pm a 7:30 pm</hora>
+            <materia>INGECO</materia>
+            <clave>013</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>7:30 pm a 8:20 pm</hora>
+            <materia>OPTI</materia>
+            <clave>009</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>8:20 pm a 9:10 pm</hora>
+            <materia>PROWEB</materia>
+            <clave>008</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>9:10 pm a 10:00 pm</hora>
+            <materia>MATIV</materia>
+            <clave>051</clave>
+        </clase>
+        <!--  Martes  -->
+        <clase>
+            <dia>Martes</dia>
+            <hora>5:00 pm a 7:30 pm</hora>
+            <materia>ARQCOMP</materia>
+            <clave>010</clave>
+        </clase>
+        <clase>
+            <dia>Martes</dia>
+            <hora>7:30 pm a 8:20 pm</hora>
+            <materia>PROWEB (LAB)</materia>
+            <clave>218</clave>
+        </clase>
+
+        <!--  Miércoles  -->
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>5:00 pm a 5:50 pm</hora>
+            <materia>BASDAT</materia>
+            <clave>006</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>5:50 pm a 6:40 pm</hora>
+            <materia>ORGEMP</materia>
+            <clave>010</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>6:40 pm a 7:30 pm</hora>
+            <materia>INGECO</materia>
+            <clave>013</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>7:30 pm a 8:20 pm</hora>
+            <materia>OPTI</materia>
+            <clave>009</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>8:20 pm a 9:10 pm</hora>
+            <materia>PROWEB</materia>
+            <clave>008</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>9:10 pm a 10:00 pm</hora>
+            <materia>MATIV</materia>
+            <clave>051</clave>
+        </clase>
+
+        <!--  Viernes  -->
+        <clase>
+            <dia>Viernes</dia>
+            <hora>5:00 pm a 5:50 pm</hora>
+            <materia>BASDAT</materia>
+            <clave>006</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>5:50 pm a 6:40 pm</hora>
+            <materia>ORGEMP</materia>
+            <clave>010</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>6:40 pm a 7:30 pm</hora>
+            <materia>INGECO</materia>
+            <clave>013</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>7:30 pm a 8:20 pm</hora>
+            <materia>OPTI</materia>
+            <clave>009</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>8:20 pm a 9:10 pm</hora>
+            <materia>PROWEB</materia>
+            <clave>008</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>9:10 pm a 10:00 pm</hora>
+            <materia>MATIV</materia>
+            <clave>051</clave>
+        </clase>
+    </integrante>
