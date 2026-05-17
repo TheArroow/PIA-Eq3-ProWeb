@@ -1,0 +1,27 @@
+/* Estilo base del botón */
+.btn-universal-pia {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #54795e;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    z-index: 9999;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    /* Agregamos transform y opacity a la transición para que sea súper fluida */
+    transition: background-color 0.3s, transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.btn-universal-pia:hover {
+    background-color: #235027;
+}
+
+/* Clase que inyecta JavaScript al hacer scroll hacia abajo */
+.btn-universal-pia.oculto {
+    opacity: 0; /* Lo hace transparente */
+    transform: translateY(-50px); /* Lo empuja 50 pixeles hacia arriba (fuera de la pantalla) */
+    pointer-events: none; /* Evita que le den clic por accidente aunque esté invisible */
+}
