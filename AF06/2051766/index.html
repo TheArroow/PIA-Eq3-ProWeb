@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>ACT6 | FIME - UANL</title>
+  <!-- Google Fonts & Font Awesome 6 (logos y estilos) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f7fc;
+      color: #1e2a3a;
+      line-height: 1.5;
+      padding: 2rem 1.5rem;
+    }
+
+    /* contenedor principal */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 2rem;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: all 0.2s;
+    }
+
+    /* ========= PORTADA (Cover) ========= */
+    .cover {
+      background: linear-gradient(135deg, #0a2b3e 0%, #0f3b4f 100%);
+      padding: 2rem 2rem 2rem 2rem;
+      position: relative;
+      color: white;
+      border-bottom: 5px solid #f7b32b;
+    }
+
+    .logos-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .logo-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(2px);
+      padding: 0.8rem 1.5rem;
+      border-radius: 60px;
+      transition: 0.2s;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .logo-icon {
+      font-size: 2.5rem;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    }
+
+    .logo-img {
+      width: 3rem;
+      height: 3rem;
+      display: block;
+      object-fit: contain;
+      border-radius: 6px;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+    }
+
+    /* Docente / actividad block */
+    .doc-info {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.4rem;
+      color: rgba(255, 255, 255, 0.95);
+      font-size: 0.85rem;
+      text-align: right;
+      background: rgba(0, 0, 0, 0.18);
+      padding: 0.45rem 0.8rem;
+      border-radius: 8px;
+      backdrop-filter: blur(4px);
+      line-height: 1.1;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .doc-info .docente {
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.15rem;
+      letter-spacing: -0.2px;
+    }
+
+    .doc-info .actividad {
+      display: block;
+      font-size: 0.82rem;
+      opacity: 0.95;
+    }
+
+    /* Move docente name slightly to the right inside the box */
+    .doc-info .docente {
+      padding-left: 0.8rem;
+    }
+
+    /* When vertical, remove horizontal padding to keep layout tidy */
+    @media (min-width: 900px) {
+      .doc-info .docente {
+        padding-left: 0;
+      }
+    }
+
+    /* On wide screens show vertical orientation on the right edge */
+    @media (min-width: 900px) {
+      .doc-info.vertical {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        top: 50%;
+        right: 0.8rem;
+        transform: translateY(-50%);
+        padding: 0.6rem 0.5rem;
+      }
+
+      .doc-info.vertical .docente {
+        margin-bottom: 0.6rem;
+      }
+    }
+
+    /* On small screens flow naturally below content */
+    @media (max-width: 700px) {
+      .doc-info {
+        position: static;
+        display: inline-block;
+        margin-top: 0.8rem;
+        background: rgba(255, 255, 255, 0.06);
+        color: white;
+        padding: 0.5rem 0.7rem;
+        border-radius: 10px;
+      }
+    }
+
+    .logo-text h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-bottom: 0.2rem;
+    }
+
+    .logo-text p {
+      font-size: 0.75rem;
+      opacity: 0.9;
+      font-weight: 400;
+    }
+
+    /* info estudiante */
+    .student-info {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 1.5rem;
+      padding: 1.2rem 1.8rem;
+      margin-top: 0.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .info-details h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
+
+    .info-details p {
+      font-size: 0.95rem;
+      margin-top: 0.25rem;
+      opacity: 0.9;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+    }
+
+    .badge-period {
+      background: #f7b32b;
+      color: #1e2a3a;
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .student-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 15px;
+      object-fit: cover;
+      border: 3px solid #f7b32b;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 700px) {
+      .student-photo {
+        width: 90px;
+        height: 90px;
+        border-radius: 12px;
+      }
+    }
+
+    /* ========= SECCIÓN TABS ========= */
+    .tabs-section {
+      padding: 2rem 2rem 2.5rem 2rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #0f3b4f;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-title i {
+      color: #f7b32b;
+      font-size: 1.8rem;
+    }
+
+    .tabs-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      border-bottom: 2px solid #e2e8f0;
+      margin: 1.5rem 0 1.8rem 0;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      padding: 0.9rem 1.6rem;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      border-radius: 40px 40px 0 0;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      color: #4a627a;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .tab-btn i {
+      font-size: 1.1rem;
+    }
+
+    .tab-btn.active {
+      background: #0f3b4f;
+      color: white;
+      box-shadow: 0 -2px 8px rgba(15, 59, 79, 0.15);
+    }
+
+    .tab-btn:not(.active):hover {
+      background: #eef2f7;
+      color: #0f3b4f;
+    }
+
+    /* panel de empresa (contenido) */
+    .company-panel {
+      background: #ffffff;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      padding: 1.8rem;
+      border: 1px solid #eef2f8;
+      transition: all 0.2s;
+    }
+
+    .company-header {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      border-left: 5px solid #f7b32b;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .company-header h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0a2b3e;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-card {
+      background: #f9fbfd;
+      border-radius: 1.2rem;
+      padding: 1rem 1.2rem;
+      border: 1px solid #e9edf2;
+    }
+
+    .info-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: #5b7a9a;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .info-value {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #0f3b4f;
+      word-break: break-word;
+    }
+
+    .salary-badge {
+      background: #e9f4e8;
+      color: #2b6e3c;
+      padding: 0.25rem 0.8rem;
+      border-radius: 30px;
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .full-description {
+      background: #fef9ef;
+      border-radius: 1rem;
+      padding: 1rem 1.2rem;
+      margin: 1rem 0;
+      border-left: 4px solid #f7b32b;
+    }
+
+    .extra-feature {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .feature-tag {
+      background: #eef2fa;
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #1e4663;
+    }
+
+    .apply-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #0f3b4f;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.6rem;
+      border-radius: 60px;
+      font-weight: 600;
+      margin-top: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      transition: 0.2s;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .apply-btn i {
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.75rem;
+      padding: 1.2rem;
+      border-top: 1px solid #e2edf2;
+      background: #fafcfd;
+      color: #4f6f8f;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 1rem;
+      }
+
+      .cover {
+        padding: 1.5rem;
+      }
+
+      .tabs-section {
+        padding: 1.5rem;
+      }
+
+      .tab-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+      }
+
+      .company-header h3 {
+        font-size: 1.4rem;
+      }
+
+      .logo-item {
+        padding: 0.5rem 1rem;
+      }
+
+      .logo-icon {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* --- Botonera Flotante Universal Minimalista (Top-Left) --- */
+    .nav-flotante-universal {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      display: flex;
+      gap: 6px;
+      /* Separación corta entre botones */
+      background-color: rgba(15, 23, 42, 0.85);
+      /* Fondo gris oscuro/azul corporativo traslúcido */
+      backdrop-filter: blur(8px);
+      /* Efecto esmerilado de fondo moderno */
+      padding: 5px 8px;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      z-index: 10000;
+      /* Prioridad máxima por encima de cualquier otra barra o menú */
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    /* Estilo base compacto para cada botón interno */
+    .btn-flotante {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Efectos visuales de Hover individuales muy sutiles */
+    .btn-flotante-index:hover {
+      background-color: rgba(249, 115, 22, 0.2);
+      /* Destello naranja suave */
+      color: #f97316;
+    }
+
+    .btn-flotante-ant:hover,
+    .btn-flotante-sig:hover {
+      background-color: rgba(56, 189, 248, 0.2);
+      /* Destello azul claro de sistema */
+      color: #38bdf8;
+    }
+
+    /* Desplazamiento y desvanecimiento coordinado al hacer scroll hacia abajo */
+    .nav-flotante-universal.oculto {
+      opacity: 0;
+      transform: translateY(-45px);
+      /* Lo empuja elegantemente hacia arriba de la pantalla */
+      pointer-events: none;
+      /* Desactiva clics fantasmas mientras esté oculto */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- PORTADA con logos FIme / UANL y datos personales -->
+    <div class="cover">
+      <div class="logos-row">
+        <!-- Logo UANL (estilo emblemático) -->
+        <div class="logo-item">
+          <div class="logo-icon"><img src="uanl.png" alt="UANL - Universidad Autónoma de Nuevo León" class="logo-img">
+          </div>
+          <div class="logo-text">
+            <h3>UANL</h3>
+            <p>Universidad Autónoma de Nuevo León</p>
+          </div>
+        </div>
+        <!-- Logo FIME -->
+        <div class="logo-item">
+          <div class="logo-icon"><img src="fimelogo.jpg" alt="FIME - Facultad de Ingeniería Mecánica y Eléctrica"
+              class="logo-img"></div>
+          <div class="logo-text">
+            <h3>FIME</h3>
+            <p>Facultad de Ingeniería Mecánica y Eléctrica</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="student-info">
+        <div class="info-details">
+          <h2>Benjamín Piña Rangel</h2>
+          <p><strong>Matrícula:</strong> 2051766 &nbsp;|&nbsp; <strong>Carrera:</strong> Ing. Administrador De Sistemas
+            &nbsp;|&nbsp; <strong>Plan de Estudio:</strong> 401</p>
+          <p><strong>DOCENTE: Lilia Lizeth Santos López</strong> ACTIVIDAD 6 &nbsp;| &nbsp; <strong>Grupo:</strong> 001
+          </p>
+        </div>
+        <img src="perfil.png" alt="Foto de perfil - Benjamín Piña Rangel" class="student-photo">
+      </div>
+    </div>
+
+    <!-- SECCIÓN PESTAÑAS: 3 empresas distintas -->
+    <div class="tabs-section">
+      <div class="section-title">
+        <i class="fas fa-briefcase"></i>
+        <span>Oportunidades de Prácticas Profesionales</span>
+      </div>
+      <div class="tabs-header" id="tabsHeader">
+        <!-- Los botones se llenarán dinámicamente desde JS (para que coincidan con los datos) -->
+      </div>
+      <div id="companyDynamicPanel" class="company-panel">
+        <!-- Contenido generado dinámicamente -->
+        <div style="text-align: center; padding: 2rem;"><i class="fas fa-spinner fa-pulse"></i> Cargando vacantes...
+        </div>
+      </div>
+    </div>
+    <footer>
+      <i class="fas fa-laptop-code"></i> ACT6 | FIME - UANL
+    </footer>
+  </div>
+
+  <script>
+    const companiesData = [
+      {
+        id: 1,
+        nombre: "Softtek",
+        vacante: "Practicante de Desarrollo y Soporte de Sistemas",
+        descripcion: "Formar parte del equipo de soluciones digitales, participando en el desarrollo de aplicaciones web, automatización de procesos y soporte a sistemas internos. Trabajarás con tecnologías modernas y metodologías ágiles.",
+        salario: "$7,500 MXN mensuales + prestaciones de ley",
+        giro: "Tecnologías de la Información / Consultoría IT",
+        ubicacion: "Monterrey, N.L. (Modalidad Híbrida)",
+        requisitos: "Estudiantes activos de Ing. Administrador de Sistemas o afín, conocimientos básicos en SQL, lógica de programación, disponibilidad de 25-30 hrs/semana.",
+        beneficios: "Beca económica, seguro facultativo, cursos internos, vales de despensa, oportunidad de contratación.",
+        contacto: "softtek.carreras@softtek.com",
+        horario: "Flexible (mañana o tarde)",
+        extra: "Empresa líder en nearshore IT con presencia global."
+      },
+      {
+        id: 2,
+        nombre: "Lenovo México",
+        vacante: "Intern - Administración de Infraestructura TI",
+        descripcion: "Apoyo en la administración de servidores, monitoreo de redes, gestión de bases de datos y asistencia en proyectos de transformación digital. Participación en equipos de ciberseguridad y soporte cloud.",
+        salario: "$8,200 MXN mensuales + bono de productividad",
+        giro: "Hardware, Tecnología y Soluciones Digitales",
+        ubicacion: "Parque Stiva, Santa Catarina (esquema híbrido 2 días oficina)",
+        requisitos: "Conocimientos en Windows/Linux, fundamentos de redes, proactividad, deseable experiencia en entornos cloud (AWS/Azure básico).",
+        beneficios: "Seguro médico, acceso a descuentos en productos Lenovo, eventos de innovación, beca flexible.",
+        contacto: "practicas.lenovo@lenovo.com",
+        horario: "Lunes a Viernes 9am - 2pm",
+        extra: "Certificación interna y posibilidad de crecimiento internacional."
+      },
+      {
+        id: 3,
+        nombre: "Banorte - Grupo Financiero",
+        vacante: "Practicante de Sistemas y Automatización",
+        descripcion: "Colaborar en el equipo de ingeniería de plataformas bancarias, automatización de procesos con herramientas low-code, análisis de datos y soporte a sistemas críticos. Exposición a entornos financieros.",
+        salario: "$7,900 MXN mensuales + fondo de ahorro",
+        giro: "Servicios Financieros / Banca Digital",
+        ubicacion: "Torre Banorte, Av. Juárez, Monterrey (esquema presencial/híbrido)",
+        requisitos: "Manejo de Excel avanzado, lógica de programación (Python o Java básico), capacidad de análisis, disponibilidad de 6 horas diarias.",
+        beneficios: "Capacitación en banca, seguro de vida, comedor subsidiado, vales de despensa, programa de mentoría.",
+        contacto: "talento.banorte@banorte.com",
+        horario: "Matutino 8am - 2pm",
+        extra: "Posibilidad de participar en proyectos de transformación digital bancaria."
+      }
+    ];
+
+    // Función para renderizar el contenido de la empresa seleccionada (según índice)
+    function renderCompanyDetails(index) {
+      const company = companiesData[index];
+      if (!company) return;
+
+      const panel = document.getElementById('companyDynamicPanel');
+      if (!panel) return;
+
+      // Construcción detallada con toda la info: vacante, descripción, salario, giro y más
+      const html = `
+      <div class="company-header">
+        <i class="fas fa-building" style="font-size: 2rem; color: #f7b32b;"></i>
+        <h3>${escapeHtml(company.nombre)}</h3>
+      </div>
+
+      <div class="detail-grid">
+        <div class="info-card">
+          <span class="info-label"><i class="fas fa-bullhorn"></i> VACANTE</span>
+          <div class="info-value">${escapeHtml(company.vacante)}</div>
+        </div>
+        <div class="info-card">
+          <span class="info-label"><i class="fas fa-chart-line"></i> GIRO DE LA EMPRESA</span>
+          <div class="info-value">${escapeHtml(company.giro)}</div>
+        </div>
+        <div class="info-card">
+          <span class="info-label"><i class="fas fa-dollar-sign"></i> SALARIO / APOYO ECONÓMICO</span>
+          <div class="info-value"><span class="salary-badge">${escapeHtml(company.salario)}</span></div>
+        </div>
+        <div class="info-card">
+          <span class="info-label"><i class="fas fa-map-marker-alt"></i> UBICACIÓN / MODALIDAD</span>
+          <div class="info-value">${escapeHtml(company.ubicacion)}</div>
+        </div>
+        <div class="info-card">
+          <span class="info-label"><i class="fas fa-clock"></i> HORARIO SUGERIDO</span>
+          <div class="info-value">${escapeHtml(company.horario)}</div>
+        </div>
+        <div class="info-card">
+          <span class="info-label"><i class="fas fa-graduation-cap"></i> REQUISITOS CLAVE</span>
+          <div class="info-value">${escapeHtml(company.requisitos)}</div>
+        </div>
+      </div>
+
+      <div class="full-description">
+        <span class="info-label" style="color:#b4680f;"><i class="fas fa-file-alt"></i> DESCRIPCIÓN DE LA VACANTE</span>
+        <p style="margin-top: 8px; font-weight: 500;">${escapeHtml(company.descripcion)}</p>
+      </div>
+
+      <div class="extra-feature">
+        <span class="feature-tag"><i class="fas fa-gift"></i> ${escapeHtml(company.beneficios)}</span>
+        <span class="feature-tag"><i class="fas fa-envelope"></i> Contacto: ${escapeHtml(company.contacto)}</span>
+        <span class="feature-tag"><i class="fas fa-info-circle"></i> ${escapeHtml(company.extra)}</span>
+      </div>
+
+      <a href="https://mx.indeed.com/" target="_blank" rel="noopener noreferrer" class="apply-btn" aria-label="Postulación interna - abrir Indeed">
+        <i class="fas fa-paper-plane"></i> Postulación interna (envía CV al correo indicado)
+      </a>
+    `;
+      panel.innerHTML = html;
+    }
+
+    // pequeña ayuda para evitar XSS en datos dinámicos
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/[&<>]/g, function (m) {
+        if (m === '&') return '&amp;';
+        if (m === '<') return '&lt;';
+        if (m === '>') return '&gt;';
+        return m;
+      }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function (c) {
+        return c;
+      });
+    }
+
+    // Construcción de las pestañas dinámicamente
+    function buildTabs() {
+      const tabsContainer = document.getElementById('tabsHeader');
+      if (!tabsContainer) return;
+
+      // Limpiar container
+      tabsContainer.innerHTML = '';
+
+      // Crear botones por cada empresa
+      companiesData.forEach((company, idx) => {
+        const button = document.createElement('button');
+        button.className = 'tab-btn';
+        // agregar icono representativo
+        const iconMap = ['fa-code', 'fa-laptop', 'fa-chart-simple'];
+        const iconClass = iconMap[idx % iconMap.length];
+        button.innerHTML = `<i class="fas ${iconClass}"></i> ${escapeHtml(company.nombre)}`;
+        button.setAttribute('data-index', idx);
+        button.addEventListener('click', (e) => {
+          // Remover clase active de todos los botones
+          document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          // Renderizar empresa seleccionada
+          renderCompanyDetails(idx);
+        });
+        tabsContainer.appendChild(button);
+      });
+
+      // Activar primera pestaña por defecto y mostrar su contenido
+      if (companiesData.length > 0) {
+        const firstBtn = tabsContainer.querySelector('.tab-btn');
+        if (firstBtn) {
+          firstBtn.classList.add('active');
+          renderCompanyDetails(0);
+        } else {
+          // fallback
+          renderCompanyDetails(0);
+        }
+      }
+    }
+
+    // Inicialización: construir tabs y asegurar que se muestre la primera empresa
+    document.addEventListener('DOMContentLoaded', () => {
+      buildTabs();
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const navFlotante = document.createElement("div");
+      navFlotante.className = "nav-flotante-universal";
+
+      const btnIndex = document.createElement("a");
+      btnIndex.innerHTML = "🏠 AF03";
+      btnIndex.href = "../../index.html";
+      btnIndex.className = "btn-flotante btn-flotante-index";
+
+      const btnAnterior = document.createElement("a");
+      btnAnterior.innerHTML = "◀ Ant";
+      btnAnterior.href = "../../AF02/AF02-2051766.html";
+      btnAnterior.className = "btn-flotante btn-flotante-ant";
+
+      const btnSiguiente = document.createElement("a");
+      btnSiguiente.innerHTML = "Sig ▶";
+      btnSiguiente.href = "../../AF07/AF07.html";
+      btnSiguiente.className = "btn-flotante btn-flotante-sig";
+
+      navFlotante.appendChild(btnIndex);
+      navFlotante.appendChild(btnAnterior);
+      navFlotante.appendChild(btnSiguiente);
+
+      document.body.appendChild(navFlotante);
+
+      let memoriaScroll = window.scrollY;
+      window.addEventListener("scroll", () => {
+        let scrollActual = window.scrollY;
+
+        if (scrollActual > memoriaScroll && scrollActual > 60) {
+          navFlotante.classList.add("oculto");
+        } else {
+          navFlotante.classList.remove("oculto");
+        }
+        memoriaScroll = scrollActual;
+      });
+    });
+  </script>
+</body>
+
+</html>

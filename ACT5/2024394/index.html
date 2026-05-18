@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Fundamental #5 - Index</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* ENCABEZADO */
+        .encabezado {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #228B22;
+            color: rgb(0, 0, 0);
+            padding: 20px;
+        }
+
+        .encabezado img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .titulo {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .titulo h1 {
+            margin: 5px;
+            font-size: 32px;
+        }
+
+        .titulo h2,
+        .titulo h3 {
+            margin: 5px;
+        }
+
+        /* TABLA */
+        .contenedor {
+            width: 95%;
+            margin: 30px auto;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: rgb(216, 250, 225);
+        }
+
+        th {
+            background-color: #0f3d0f;
+            color: rgb(216, 250, 225);
+            padding: 15px;
+            border: 1px solid rgb(247, 247, 247);
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 12px;
+            text-align: center;
+            height: 70px;
+        }
+
+        .hora {
+            background-color: #c9ffd5;
+            font-weight: bold;
+        }
+
+        .materia {
+            background-color: #c9ffd5;
+            font-weight: bold;
+        }
+
+        /* --- Botonera Flotante Universal Minimalista (Top-Left) --- */
+        .nav-flotante-universal {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            display: flex;
+            gap: 6px;
+            /* Separación corta entre botones */
+            background-color: rgba(15, 23, 42, 0.85);
+            /* Fondo gris oscuro/azul corporativo traslúcido */
+            backdrop-filter: blur(8px);
+            /* Efecto esmerilado de fondo moderno */
+            padding: 5px 8px;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 10000;
+            /* Prioridad máxima por encima de cualquier otra barra o menú */
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        /* Estilo base compacto para cada botón interno */
+        .btn-flotante {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 6px 10px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Efectos visuales de Hover individuales muy sutiles */
+        .btn-flotante-index:hover {
+            background-color: rgba(249, 115, 22, 0.2);
+            /* Destello naranja suave */
+            color: #f97316;
+        }
+
+        .btn-flotante-ant:hover,
+        .btn-flotante-sig:hover {
+            background-color: rgba(56, 189, 248, 0.2);
+            /* Destello azul claro de sistema */
+            color: #38bdf8;
+        }
+
+        /* Desplazamiento y desvanecimiento coordinado al hacer scroll hacia abajo */
+        .nav-flotante-universal.oculto {
+            opacity: 0;
+            transform: translateY(-45px);
+            /* Lo empuja elegantemente hacia arriba de la pantalla */
+            pointer-events: none;
+            /* Desactiva clics fantasmas mientras esté oculto */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <div class="encabezado">
+
+        <img src="logo-uanl.png.png" alt="Logo UANL">
+
+        <div class="titulo">
+            <h2>Universidad Autónoma de Nuevo León</h2>
+            <h3>Facultad de Ingeniería Mecánica y Eléctrica</h3>
+
+            <h1>Irvin Azael Garcia Avila</h1>
+
+            <h3>Matrícula: 2024394</h3>
+
+            <h3>Actividad Fundamental #5 - Index</h3>
+        </div>
+
+        <img src="logo-fime.png.jpg" alt="Logo FIME">
+
+    </div>
+
+    <!-- HORARIO -->
+    <div class="contenedor">
+
+        <table>
+
+            <tr>
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+                <th>Sábado</th>
+            </tr>
+
+            <!-- SABADO MAÑANA -->
+            <tr>
+                <td class="hora">9:30 am - 12:00 pm</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="materia"><a href="arqcomp.html">ARQCOMP</a><br>001
+            </tr>
+
+            <!-- SABADO TARDE -->
+            <tr>
+                <td class="hora">1:40 pm - 2:30 pm</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="materia"><a href="translab.html">TRANS LAB</a><br>605
+            </tr>
+
+            <tr>
+                <td class="hora">2:30 pm - 5:00 pm</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="materia"><a href="mativ.html">MATIV</a><br>005
+            </tr>
+
+            <!-- JUEVES -->
+            <tr>
+                <td class="hora">4:10 pm - 5:00 pm</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="materia"><a href="proweblab.html">PROWEB LAB</a><br>416
+                <td></td>
+                <td></td>
+            </tr>
+
+            <!-- TRANS -->
+            <tr>
+                <td class="hora">5:00 pm - 5:50 pm</td>
+                <td class="materia"><a href="trans.html">TRANS</a><br>019>
+                <td></td>
+                <td class="materia"><a href="trans.html">TRANS</a><br>019>
+                <td></td>
+                <td class="materia"><a href="trans.html">TRANS</a><br>019>
+                <td></td>
+            </tr>
+
+            <!-- BASDAT -->
+            <tr>
+                <td class="hora">7:30 pm - 8:20 pm</td>
+                <td class="materia"><a href="basdat.html">BASDAT</a><br>007>
+                <td></td>
+                <td class="materia"><a href="basdat.html">BASDAT</a><br>007>
+                <td class="materia"><a href="lide.html">LIDE</a><br>007
+                <td class="materia"><a href="basdat.html">BASDAT</a><br>007>
+                <td></td>
+            </tr>
+
+            <!-- PROWEB -->
+            <tr>
+                <td class="hora">8:20 pm - 9:10 pm</td>
+                <td class="materia"><a href="proweb.html">PROWEB</a><br>008
+                <td></td>
+                <td class="materia"><a href="proweb.html">PROWEB</a><br>008
+                <td class="materia"><a href="lide.html">LIDE</a><br>007
+                <td class="materia"><a href="proweb.html">PROWEB</a><br>008
+                <td></td>
+            </tr>
+
+
+            <!-- OPTI -->
+            <tr>
+                <td class="hora">9:10 pm - 10:00 pm</td>
+                <td class="materia"><a href="opti.html">OPTI</a><br>014
+                <td></td>
+                <td class="materia"><a href="opti.html">OPTI</a><br>014
+                <td class="materia"><a href="lide.html">LIDE</a><br>007
+                <td class="materia"><a href="opti.html">OPTI</a><br>014
+                <td></td>
+            </tr>
+
+
+        </table>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const navFlotante = document.createElement("div");
+            navFlotante.className = "nav-flotante-universal";
+
+            const btnIndex = document.createElement("a");
+            btnIndex.innerHTML = "🏠 AF03";
+            btnIndex.href = "../../index.html";
+            btnIndex.className = "btn-flotante btn-flotante-index";
+
+            const btnAnterior = document.createElement("a");
+            btnAnterior.innerHTML = "◀ Ant";
+            btnAnterior.href = "../../AF02/AF02-2024394.html";
+            btnAnterior.className = "btn-flotante btn-flotante-ant";
+
+            const btnSiguiente = document.createElement("a");
+            btnSiguiente.innerHTML = "Sig ▶";
+            btnSiguiente.href = "../../AF06/2024394/Index%20sin%20hipervinculos.html";
+            btnSiguiente.className = "btn-flotante btn-flotante-sig";
+
+            navFlotante.appendChild(btnIndex);
+            navFlotante.appendChild(btnAnterior);
+            navFlotante.appendChild(btnSiguiente);
+
+            document.body.appendChild(navFlotante);
+
+            let memoriaScroll = window.scrollY;
+            window.addEventListener("scroll", () => {
+                let scrollActual = window.scrollY;
+
+                if (scrollActual > memoriaScroll && scrollActual > 60) {
+                    navFlotante.classList.add("oculto");
+                } else {
+                    navFlotante.classList.remove("oculto");
+                }
+                memoriaScroll = scrollActual;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

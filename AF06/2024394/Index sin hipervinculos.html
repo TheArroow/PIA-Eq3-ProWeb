@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Fundamental #5 - Index</title>
+
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* ENCABEZADO */
+        .encabezado{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #228B22;
+            color: white;
+            padding: 20px;
+        }
+
+        .encabezado img{
+            width: 100px;
+            height: 100px;
+        }
+
+        .titulo{
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .titulo h1{
+            margin: 5px;
+            font-size: 32px;
+        }
+
+        .titulo h2,
+        .titulo h3{
+            margin: 5px;
+        }
+
+        /* TABLA */
+        .contenedor{
+            width: 95%;
+            margin: 30px auto;
+            overflow-x: auto;
+        }
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th{
+            background-color: #228B22;
+            color: white;
+            padding: 15px;
+            border: 1px solid black;
+        }
+
+        td{
+            border: 1px solid black;
+            padding: 12px;
+            text-align: center;
+            height: 70px;
+        }
+
+        .hora{
+            background-color: #b7d7b0;
+            font-weight: bold;
+        }
+
+        .materia{
+            background-color: #dcefd8;
+            font-weight: bold;
+        }
+        /* PESTAÑAS */
+.tabs{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tablink{
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background-color: #228B22;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.tablink:hover{
+    background-color: #1d6f1d;
+}
+
+.tablink.activo{
+    background-color: #145214;
+}
+
+.empresa{
+    display: none;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.activoEmpresa{
+    display: block;
+}
+
+.empresa h2{
+    color: #228B22;
+}
+
+/* --- Botonera Flotante Universal Minimalista (Top-Left) --- */
+.nav-flotante-universal {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    gap: 6px; /* Separación corta entre botones */
+    background-color: rgba(15, 23, 42, 0.85); /* Fondo gris oscuro/azul corporativo traslúcido */
+    backdrop-filter: blur(8px); /* Efecto esmerilado de fondo moderno */
+    padding: 5px 8px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10000; /* Prioridad máxima por encima de cualquier otra barra o menú */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Estilo base compacto para cada botón interno */
+.btn-flotante {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Efectos visuales de Hover individuales muy sutiles */
+.btn-flotante-index:hover {
+    background-color: rgba(249, 115, 22, 0.2); /* Destello naranja suave */
+    color: #f97316;
+}
+
+.btn-flotante-ant:hover, 
+.btn-flotante-sig:hover {
+    background-color: rgba(56, 189, 248, 0.2); /* Destello azul claro de sistema */
+    color: #38bdf8;
+}
+
+/* Desplazamiento y desvanecimiento coordinado al hacer scroll hacia abajo */
+.nav-flotante-universal.oculto {
+    opacity: 0;
+    transform: translateY(-45px); /* Lo empuja elegantemente hacia arriba de la pantalla */
+    pointer-events: none; /* Desactiva clics fantasmas mientras esté oculto */
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <div class="encabezado">
+
+        <img src="logo-uanl.png.png" alt="Logo UANL">
+
+        <div class="titulo">
+            <h2>Universidad Autónoma de Nuevo León</h2>
+            <h3>Facultad de Ingeniería Mecánica y Eléctrica</h3>
+
+            <h1>Irvin Azael Garcia Avila</h1>
+
+            <h3>Matrícula: 2024394</h3>
+
+            <h3>Actividad Fundamental #6 - Index</h3>
+        </div>
+
+        <img src="logo-fime.png.jpg" alt="Logo FIME">
+
+    </div>
+
+    <!-- HORARIO -->
+    <div class="contenedor">
+
+        <table>
+
+            <tr>
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+                <th>Sábado</th>
+            </tr>
+
+            <!-- SABADO MAÑANA -->
+            <tr>
+                <td class="hora">9:30 am - 12:00 pm</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="materia">ARQCOMP<br>001</td>
+            </tr>
+
+            <!-- SABADO TARDE -->
+            <tr>
+                <td class="hora">1:40 pm - 2:30 pm</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="materia">TRANS LAB<br>605</td>
+            </tr>
+
+            <tr>
+                <td class="hora">2:30 pm - 5:00 pm</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="materia">MATIV<br>005</td>
+            </tr>
+
+            <!-- JUEVES -->
+            <tr>
+                <td class="hora">4:10 pm - 5:00 pm</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="materia">PROWEB LAB<br>416</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <!-- TRANS -->
+            <tr>
+                <td class="hora">5:00 pm - 5:50 pm</td>
+                <td class="materia">TRANS<br>019</td>
+                <td></td>
+                <td class="materia">TRANS<br>019</td>
+                <td></td>
+                <td class="materia">TRANS<br>019</td>
+                <td></td>
+            </tr>
+
+            <!-- BASDAT -->
+            <tr>
+                <td class="hora">7:30 pm - 8:20 pm</td>
+                <td class="materia">BASDAT<br>007</td>
+                <td></td>
+                <td class="materia">BASDAT<br>007</td>
+                <td class="materia">LIDE<br>007</td>
+                <td class="materia">BASDAT<br>007</td>
+                <td></td>
+            </tr>
+
+            <!-- PROWEB -->
+            <tr>
+                <td class="hora">8:20 pm - 9:10 pm</td>
+                <td class="materia">PROWEB<br>008</td>
+                <td></td>
+                <td class="materia">PROWEB<br>008</td>
+                <td class="materia">LIDE<br>007</td>
+                <td class="materia">PROWEB<br>008</td>
+                <td></td>
+            </tr>
+
+            <!-- OPTI -->
+            <tr>
+                <td class="hora">9:10 pm - 10:00 pm</td>
+                <td class="materia">OPTI<br>014</td>
+                <td></td>
+                <td class="materia">OPTI<br>014</td>
+                <td class="materia">LIDE<br>007</td>
+                <td class="materia">OPTI<br>014</td>
+                <td></td>
+            </tr>
+
+        </table>
+
+    </div>
+
+        <!-- EMPRESAS -->
+    <div class="contenedor">
+
+    <h1 style="text-align:center; color:#228B22;">
+        Empresas para Prácticas
+    </h1>
+
+    <!-- BOTONES -->
+    <div class="tabs">
+
+        <button class="tablink activo"
+        onclick="abrirEmpresa(event, 'danfoss')">
+            Danfoss
+        </button>
+
+        <button class="tablink"
+        onclick="abrirEmpresa(event, 'metalsa')">
+            Metalsa
+        </button>
+
+        <button class="tablink"
+        onclick="abrirEmpresa(event, 'totalplay')">
+            Totalplay
+        </button>
+
+    </div>
+
+    <!-- DANFOSS -->
+    <div id="danfoss" class="empresa activoEmpresa">
+
+        <h2>Danfoss</h2>
+
+        <p>
+            <strong>Vacantes:</strong><br>
+            IT Intern<br>
+            Practicante de Sistemas<br>
+            Data Analyst Intern<br>
+            SAP Support Intern
+        </p>
+
+        <p>
+            <strong>Apoyo Económico:</strong><br>
+            $7,000 a $12,000 MXN
+        </p>
+
+    </div>
+
+    <!-- METALSA -->
+    <div id="metalsa" class="empresa">
+
+        <h2>Metalsa</h2>
+
+        <p>
+            <strong>Vacantes:</strong><br>
+            Practicante TI<br>
+            Data Analyst Intern<br>
+            Soporte Técnico<br>
+            Sistemas de Manufactura
+        </p>
+
+        <p>
+            <strong>Apoyo Económico:</strong><br>
+            $7,000 a $11,000 MXN
+        </p>
+
+    </div>
+
+    <!-- TOTALPLAY -->
+    <div id="totalplay" class="empresa">
+
+        <h2>Totalplay</h2>
+
+        <p>
+            <strong>Vacantes:</strong><br>
+            Soporte Técnico<br>
+            NOC Jr<br>
+            Practicante TI<br>
+            Redes y Telecomunicaciones
+        </p>
+
+        <p>
+            <strong>Apoyo Económico:</strong><br>
+            $7,000 a $9,000 MXN
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+
+function abrirEmpresa(event, empresaId){
+
+    let empresas =
+    document.querySelectorAll(".empresa");
+
+    empresas.forEach(empresa => {
+        empresa.classList.remove("activoEmpresa");
+    });
+
+    let botones =
+    document.querySelectorAll(".tablink");
+
+    botones.forEach(btn => {
+        btn.classList.remove("activo");
+    });
+
+    document.getElementById(empresaId)
+    .classList.add("activoEmpresa");
+
+    event.currentTarget
+    .classList.add("activo");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const navFlotante = document.createElement("div");
+    navFlotante.className = "nav-flotante-universal";
+
+    const btnIndex = document.createElement("a");
+    btnIndex.innerHTML = "🏠 AF03";
+    btnIndex.href = "../../index.html";
+    btnIndex.className = "btn-flotante btn-flotante-index";
+
+    const btnAnterior = document.createElement("a");
+    btnAnterior.innerHTML = "◀ Ant";
+    btnAnterior.href = "../../ACT5/2024394/index.html"; 
+    btnAnterior.className = "btn-flotante btn-flotante-ant";
+
+    const btnSiguiente = document.createElement("a");
+    btnSiguiente.innerHTML = "Sig ▶";
+    btnSiguiente.href = "../../AF07/AF07.html"; 
+    btnSiguiente.className = "btn-flotante btn-flotante-sig";
+
+    navFlotante.appendChild(btnIndex);
+    navFlotante.appendChild(btnAnterior);
+    navFlotante.appendChild(btnSiguiente);
+
+    document.body.appendChild(navFlotante);
+
+    let memoriaScroll = window.scrollY;
+    window.addEventListener("scroll", () => {
+        let scrollActual = window.scrollY;
+        
+        if (scrollActual > memoriaScroll && scrollActual > 60) {
+            navFlotante.classList.add("oculto");
+        } else {
+            navFlotante.classList.remove("oculto");
+        }
+        memoriaScroll = scrollActual;
+    });
+});
+
+</script>
+
+</body>
+</html>
