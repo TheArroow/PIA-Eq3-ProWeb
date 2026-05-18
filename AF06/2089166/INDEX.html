@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../Estilos/btn.css">
 </head>
+
 <body>
 
     <section class="hero-section">
@@ -17,19 +19,20 @@
         <div class="glass-card">
             <h1>Bienvenido</h1>
             <div class="subtitle">Programación Web | Práctica 8</div>
-            
+
             <div class="intro-text">
                 <h2>Introducción a la Actividad</h2>
                 <p>
-                    En esta actividad exploramos el diseño de interfaces dinámicas y la gestión de contenido estructurado. 
-                    He desarrollado un sistema de navegación optimizado para visualizar una propuesta de 
-                    <strong>prácticas profesionales</strong> enfocada en el área de ingeniería en sistemas dentro de 
+                    En esta actividad exploramos el diseño de interfaces dinámicas y la gestión de contenido
+                    estructurado.
+                    He desarrollado un sistema de navegación optimizado para visualizar una propuesta de
+                    <strong>prácticas profesionales</strong> enfocada en el área de ingeniería en sistemas dentro de
                     zonas clave como Apodaca y el área metropolitana de NL.
                 </p>
             </div>
 
             <a href="act6.html" class="btn-entrar">Ver Reporte Completo</a>
-            
+
             <p style="margin-top: 20px; font-size: 0.8rem; color: #999;">
                 Facultad de Ingeniería Mecánica y Eléctrica - UANL
             </p>
@@ -45,6 +48,45 @@
         </div>
     </main>
 
-    <script src="../../Script/btn.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const navFlotante = document.createElement("div");
+            navFlotante.className = "nav-flotante-universal";
+
+            const btnIndex = document.createElement("a");
+            btnIndex.innerHTML = "🏠 AF03";
+            btnIndex.href = "../../index.html"; 
+            btnIndex.className = "btn-flotante btn-flotante-index";
+
+            const btnAnterior = document.createElement("a");
+            btnAnterior.innerHTML = "◀ Ant";
+            btnAnterior.href = "../../ACT5/2089166/PORTADA.html";
+            btnAnterior.className = "btn-flotante btn-flotante-ant";
+
+            const btnSiguiente = document.createElement("a");
+            btnSiguiente.innerHTML = "Sig ▶";
+            btnSiguiente.href = "../../AF07/AF07.html";
+            btnSiguiente.className = "btn-flotante btn-flotante-sig";
+
+            navFlotante.appendChild(btnIndex);
+            navFlotante.appendChild(btnAnterior);
+            navFlotante.appendChild(btnSiguiente);
+
+            document.body.appendChild(navFlotante);
+
+            let memoriaScroll = window.scrollY;
+            window.addEventListener("scroll", () => {
+                let scrollActual = window.scrollY;
+
+                if (scrollActual > memoriaScroll && scrollActual > 60) {
+                    navFlotante.classList.add("oculto");
+                } else {
+                    navFlotante.classList.remove("oculto");
+                }
+                memoriaScroll = scrollActual;
+            });
+        });
+    </script>
 </body>
+
 </html>

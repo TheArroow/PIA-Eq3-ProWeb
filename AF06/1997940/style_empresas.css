@@ -216,3 +216,49 @@ body {
 .btn-navegacion:hover {
     background-color: #f97316;
 }
+
+.nav-flotante-universal {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    gap: 6px; 
+    background-color: rgba(15, 23, 42, 0.85); 
+    backdrop-filter: blur(8px); 
+    padding: 5px 8px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10000; 
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.btn-flotante {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.btn-flotante-index:hover {
+    background-color: rgba(249, 115, 22, 0.2); 
+    color: #f97316;
+}
+
+.btn-flotante-ant:hover, 
+.btn-flotante-sig:hover {
+    background-color: rgba(56, 189, 248, 0.2); 
+    color: #38bdf8;
+}
+
+.nav-flotante-universal.oculto {
+    opacity: 0;
+    transform: translateY(-45px); 
+    pointer-events: none; 
+}

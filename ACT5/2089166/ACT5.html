@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="ACT5.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <div id="aviso-trabajo" class="alert-overlay">
@@ -24,23 +26,70 @@
     </header>
 
     <main class="container">
-        
+
         <section class="card-horario">
             <h3>Mi Horario Semestral</h3>
             <div class="tabla-responsive">
                 <table class="tabla-horario">
                     <thead>
                         <tr>
-                            <th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th>
+                            <th>Hora</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>17:00</td><td>BASDAT</td><td>LIDE</td><td>BASDAT</td><td>-</td><td>BASDAT</td></tr>
-                        <tr><td>17:50</td><td>ETICA</td><td>LIDE</td><td>ETICA</td><td>-</td><td>ETICA</td></tr>
-                        <tr><td>18:40</td><td>DISSOFT</td><td>LIDE</td><td>DISSOFT</td><td>-</td><td>DISSOFT</td></tr>
-                        <tr><td>19:30</td><td>APROY</td><td>LB-PW</td><td>APROY</td><td>-</td><td>APROY</td></tr>
-                        <tr><td>20:20</td><td>PROWEB</td><td>LB-RC</td><td>PROWEB</td><td>-</td><td>PROWEB</td></tr>
-                        <tr><td>21:10</td><td>REDCOM</td><td>-</td><td>REDCOM</td><td>-</td><td>REDCOM</td></tr>
+                        <tr>
+                            <td>17:00</td>
+                            <td>BASDAT</td>
+                            <td>LIDE</td>
+                            <td>BASDAT</td>
+                            <td>-</td>
+                            <td>BASDAT</td>
+                        </tr>
+                        <tr>
+                            <td>17:50</td>
+                            <td>ETICA</td>
+                            <td>LIDE</td>
+                            <td>ETICA</td>
+                            <td>-</td>
+                            <td>ETICA</td>
+                        </tr>
+                        <tr>
+                            <td>18:40</td>
+                            <td>DISSOFT</td>
+                            <td>LIDE</td>
+                            <td>DISSOFT</td>
+                            <td>-</td>
+                            <td>DISSOFT</td>
+                        </tr>
+                        <tr>
+                            <td>19:30</td>
+                            <td>APROY</td>
+                            <td>LB-PW</td>
+                            <td>APROY</td>
+                            <td>-</td>
+                            <td>APROY</td>
+                        </tr>
+                        <tr>
+                            <td>20:20</td>
+                            <td>PROWEB</td>
+                            <td>LB-RC</td>
+                            <td>PROWEB</td>
+                            <td>-</td>
+                            <td>PROWEB</td>
+                        </tr>
+                        <tr>
+                            <td>21:10</td>
+                            <td>REDCOM</td>
+                            <td>-</td>
+                            <td>REDCOM</td>
+                            <td>-</td>
+                            <td>REDCOM</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -51,7 +100,7 @@
 
             <div id="materia-box" class="materia-card">
                 <div id="materia-info"></div>
-                
+
                 <div class="materia-footer">
                     <button class="nav-m" onclick="cambiarMateria(-1)">← Anterior</button>
                     <a href="PORTADA.html" class="nav-m">Inicio</a>
@@ -67,62 +116,62 @@
         }
 
         const materias = [
-            { 
-                t: "BASE DE DATOS", ing: "Jorge Alejandro Lozano Gonzalez", 
+            {
+                t: "BASE DE DATOS", ing: "Jorge Alejandro Lozano Gonzalez",
                 eval: "Evidencias fases: 40%<br>Medio curso: 20%<br>PIA: 40%",
                 temas: ["SQL", "Normalización", "Diagrama E-R", "Modelo Relacional"],
-                img: "basededatos.jpg", vid: "NORMALIZACION.mp4" 
+                img: "basededatos.jpg", vid: "NORMALIZACION.mp4"
             },
-            { 
-                t: "ETICA", ing: "Alfredo Lopez Vazquez", 
+            {
+                t: "ETICA", ing: "Alfredo Lopez Vazquez",
                 eval: "Act 1 a 5: 20% c/u",
                 temas: ["Actividades sobre filósofos", "Debates y opiniones", "Análisis de casos"],
-                img: "ETICA.jpg", vid: "ETICAV.mp4" 
+                img: "ETICA.jpg", vid: "ETICAV.mp4"
             },
-            { 
-                t: "DISEÑO Y ESPECIFICACIÓN", ing: "Jorge Alejandro Lozano Gonzalez", 
+            {
+                t: "DISEÑO Y ESPECIFICACIÓN", ing: "Jorge Alejandro Lozano Gonzalez",
                 eval: "Evidencias fases: 40%<br>Medio curso: 20%<br>PIA: 40%",
                 temas: ["Métodos de análisis", "Componentes de SI", "Desarrollo de SI"],
                 img: "DYEDS.jpg", vid: "DYEDS.mp4"
             },
-            { 
-                t: "ADMINISTRACION DE PROYECTOS", ing: "Natalia Tovar Leticia Amelia", 
+            {
+                t: "ADMINISTRACION DE PROYECTOS", ing: "Natalia Tovar Leticia Amelia",
                 eval: "Act 1-10: 3-4% c/u<br>Act 11 y 17: 15% c/u<br>Act 18: 20%",
                 temas: ["PMBOK", "SCRUM"],
                 img: "SCRUM.jpg", vid: "pmbok.mp4"
             },
-            { 
-                t: "PROGRAMACION WEB", ing: "Liliana Lizeth Santos Lopez", 
+            {
+                t: "PROGRAMACION WEB", ing: "Liliana Lizeth Santos Lopez",
                 eval: "Act 1-2: 25% c/u<br>Act 3: 30%<br>Act 4-7: 5% c/u",
                 temas: ["OSI y TCP", "HTML/CSS/JS", "PHP", "Java / .NET"],
                 img: "HTML.jpg", vid: "progra.mp4"
             },
-            { 
-                t: "LAB PROGRAMACION WEB", ing: "Liliana Lizeth Santos Lopez", 
+            {
+                t: "LAB PROGRAMACION WEB", ing: "Liliana Lizeth Santos Lopez",
                 eval: "Act 1-10: 5% c/u<br>PIA: 50%",
                 temas: ["HTML", "CSS", "JavaScript", "PHP", "XML", "Java", ".NET"],
                 img: "PHP.jpg", vid: "labprogra.mp4"
             },
-            { 
-                t: "REDES COMPUTACIONALES", ing: "Luis Esteba Vega Gomez", 
+            {
+                t: "REDES COMPUTACIONALES", ing: "Luis Esteba Vega Gomez",
                 eval: "Act 1-5: 10% c/u<br>Medio curso: 20%<br>PIA: 30%",
                 temas: ["Fundamentos de redes", "Inter-VLAN routing", "EtherChannel", "DHCPv4/v6"],
                 img: "REDES.jpg", vid: "REDES.mp4"
             },
-            { 
-                t: "LAB REDES COMPUTACIONALES", ing: "Valentin Belisario Domínguez Vera", 
+            {
+                t: "LAB REDES COMPUTACIONALES", ing: "Valentin Belisario Domínguez Vera",
                 eval: "Act 1-10: 10% c/u",
                 temas: ["Hardware de Red", "Cableado Estructurado", "VLANs", "EtherChannel"],
                 img: "LABREDES.jpg", vid: "LABREDES.mp4"
             },
-            { 
-                t: "LIDERAZGO", ing: "Edgar Miguel Martinez Lozano", 
+            {
+                t: "LIDERAZGO", ing: "Edgar Miguel Martinez Lozano",
                 eval: "Participación: 20%<br>Act 1-4: 10% c/u<br>PIA: 25%",
                 temas: ["Inteligencia emocional", "Comunicación", "Negociación"],
                 img: "LIDERAZGO.jpg", vid: "LIDERAZGO.mp4"
             },
-            { 
-                t: "CONTEXTO SOCIAL", ing: "Felipe de Jesús Rivera Viezcas", 
+            {
+                t: "CONTEXTO SOCIAL", ing: "Felipe de Jesús Rivera Viezcas",
                 eval: "Act 2,3,4,7: 15% c/u<br>PIA: 30%",
                 temas: ["Entrevistas de trabajo", "Puestos de trabajo", "Diplomados"],
                 img: "contexto.jpg", vid: "contexto.mp4"
@@ -146,7 +195,7 @@
             indexActual = idx;
             actualizarContenido();
             document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            if(evt) evt.currentTarget.classList.add('active');
+            if (evt) evt.currentTarget.classList.add('active');
             else document.querySelectorAll('.tab-btn')[idx].classList.add('active');
         }
 
@@ -158,9 +207,9 @@
         function actualizarContenido() {
             const m = materias[indexActual];
             const temasHtml = m.temas.map(t => `<li>${t}</li>`).join('');
-            
-            const videoHtml = m.vid 
-                ? `<video class="video-evidencia" controls><source src="${m.vid}" type="video/mp4"></video>` 
+
+            const videoHtml = m.vid
+                ? `<video class="video-evidencia" controls><source src="${m.vid}" type="video/mp4"></video>`
                 : `<div class="no-video">Video de evidencia pendiente</div>`;
 
             document.getElementById('materia-info').innerHTML = `
@@ -186,6 +235,8 @@
         }
 
         window.onload = () => { generarTabs(); actualizarContenido(); };
+
     </script>
 </body>
+
 </html>

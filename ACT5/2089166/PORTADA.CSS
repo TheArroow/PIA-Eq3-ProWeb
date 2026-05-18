@@ -137,3 +137,53 @@ body, html {
     background-color: #a338c2;
     box-shadow: 0 10px 30px rgba(142, 36, 170, 0.5);
 }
+
+/* --- Botonera Flotante Universal Minimalista (Top-Left) --- */
+.nav-flotante-universal {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    gap: 6px; /* Separación corta entre botones */
+    background-color: rgba(15, 23, 42, 0.85); /* Fondo gris oscuro/azul corporativo traslúcido */
+    backdrop-filter: blur(8px); /* Efecto esmerilado de fondo moderno */
+    padding: 5px 8px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10000; /* Prioridad máxima por encima de cualquier otra barra o menú */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Estilo base compacto para cada botón interno */
+.btn-flotante {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Efectos visuales de Hover individuales muy sutiles */
+.btn-flotante-index:hover {
+    background-color: rgba(249, 115, 22, 0.2); /* Destello naranja suave */
+    color: #f97316;
+}
+
+.btn-flotante-ant:hover, 
+.btn-flotante-sig:hover {
+    background-color: rgba(56, 189, 248, 0.2); /* Destello azul claro de sistema */
+    color: #38bdf8;
+}
+
+/* Desplazamiento y desvanecimiento coordinado al hacer scroll hacia abajo */
+.nav-flotante-universal.oculto {
+    opacity: 0;
+    transform: translateY(-45px); /* Lo empuja elegantemente hacia arriba de la pantalla */
+    pointer-events: none; /* Desactiva clics fantasmas mientras esté oculto */
+}

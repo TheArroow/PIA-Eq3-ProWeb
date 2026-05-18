@@ -1,6 +1,4 @@
-// main.js
 document.addEventListener("DOMContentLoaded", () => {
-    // Solo mostramos la alerta si estamos en el index
     let ruta = window.location.pathname;
     if (ruta.endsWith("index.html") || ruta === "/" || ruta.endsWith("/")) {
         alert("Omar Joaquín Sosa Moreno. Actividad Fundamental #5");
@@ -9,15 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function cargarXML() {
     try {
-        // Reemplaza 'datos.xml' por la ruta real de tu archivo XML
         const respuesta = await fetch('../IMG/AF02-1997940.xml');
         const texto = await respuesta.text();
         
-        // Parsear el texto plano a un objeto DOM de XML
         const parser = new DOMParser();
         const xmlDoc = parser.parseFromString(texto, "text/xml");
         
-        // Ejemplo de extracción: Supongamos que tu XML tiene etiquetas <tema>
         const temas = xmlDoc.getElementsByTagName("clase");
         let htmlContenido = "<ul>";
         
@@ -28,7 +23,6 @@ async function cargarXML() {
         
         htmlContenido += "</ul>";
         
-        // Inyectar el resultado en el div del HTML
         document.getElementById("contenedor-xml").innerHTML = htmlContenido;
         
     } catch (error) {
@@ -37,9 +31,46 @@ async function cargarXML() {
     }
 }
 
-// Ejecutar la función cuando la página esté lista
 document.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById("contenedor-xml")) {
         cargarXML();
     }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const navFlotante = document.createElement("div");
+    navFlotante.className = "nav-flotante-universal";
+
+    const btnIndex = document.createElement("a");
+    btnIndex.innerHTML = "🏠 AF03";
+    btnIndex.href = "../../index.html";
+    btnIndex.className = "btn-flotante btn-flotante-index";
+
+    const btnAnterior = document.createElement("a");
+    btnAnterior.innerHTML = "◀ Ant";
+    btnAnterior.href = "../../AF02/AF02-1997940.html"; 
+    btnAnterior.className = "btn-flotante btn-flotante-ant";
+
+    const btnSiguiente = document.createElement("a");
+    btnSiguiente.innerHTML = "Sig ▶";
+    btnSiguiente.href = "../../AF06/1997940/index.html"; 
+    btnSiguiente.className = "btn-flotante btn-flotante-sig";
+
+    navFlotante.appendChild(btnIndex);
+    navFlotante.appendChild(btnAnterior);
+    navFlotante.appendChild(btnSiguiente);
+
+    document.body.appendChild(navFlotante);
+
+    let memoriaScroll = window.scrollY;
+    window.addEventListener("scroll", () => {
+        let scrollActual = window.scrollY;
+        
+        if (scrollActual > memoriaScroll && scrollActual > 60) {
+            navFlotante.classList.add("oculto");
+        } else {
+            navFlotante.classList.remove("oculto");
+        }
+        memoriaScroll = scrollActual;
+    });
 });

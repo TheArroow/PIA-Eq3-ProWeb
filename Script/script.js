@@ -99,7 +99,6 @@ function construirArbolColapsable(nodo) {
 
 const botonSubir = document.getElementById("btnSubir");
 
-// Validamos si el botón existe en la página actual antes de agregarle eventos
 if (botonSubir) {
     window.onscroll = function () {
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
