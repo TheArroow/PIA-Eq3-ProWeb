@@ -129,6 +129,40 @@ h3 {
     transition: background 0.3s;
 }
 
+/* --- Ajuste seguro para la foto de perfil en el Header --- */
+.perfil-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Espacio de separación entre el texto y la imagen */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.perfil-texto {
+    text-align: left; /* Alinea el texto a la izquierda para que contraste con la foto */
+}
+
+.perfil-foto {
+    width: 120px;          /* Ancho fijo controlado para que no rompa nada */
+    height: 120px;         /* Alto idéntico para mantener proporción 1:1 */
+    border-radius: 50%;    /* Corta la imagen en forma circular estética */
+    object-fit: cover;     /* Evita que la foto se estire o se distorsione */
+    border: 3px solid white; /* Un borde blanco elegante */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera para dar profundidad */
+}
+
+/* Responsivo: Si se abre en un celular, la foto se acomoda arriba del texto automáticamente */
+@media (max-width: 650px) {
+    .perfil-contenedor {
+        flex-direction: column-reverse; /* Pone la foto arriba y el texto abajo en pantallas chicas */
+        gap: 20px;
+    }
+    .perfil-texto {
+        text-align: center; /* Vuelve a centrar el texto en móviles */
+    }
+}
+
 .btn-nav:hover { background-color: #bdbdbd; }
 .btn-inicio { background-color: #ffb300; color: #000; }
 .btn-inicio:hover { background-color: #ffa000; }

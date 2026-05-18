@@ -3,7 +3,7 @@
     position: fixed;
     top: 20px;
     left: 20px;
-    background-color: #54795e;
+    background-color: #3f485a;
     color: white;
     padding: 10px 15px;
     text-decoration: none;
@@ -16,7 +16,7 @@
 }
 
 .btn-universal-pia:hover {
-    background-color: #235027;
+    background-color: #242350;
 }
 
 /* Clase que inyecta JavaScript al hacer scroll hacia abajo */

@@ -1,0 +1,139 @@
+:root {
+    --fondo-purpura: #211a30;
+    --morado-fime: #2e1a47;
+    --morado-claro: #3b1c6b;
+    --magenta: #8e24aa;
+    --blanco: #943eaa;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--fondo-purpura);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Efecto de fondo */
+.page-bg {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(142, 36, 170, 0.15) 0%, rgba(33, 26, 48, 1) 85%);
+    z-index: -1;
+}
+
+.portada-card {
+    background-color: var(--morado-fime);
+    width: 95%;
+    max-width: 800px;
+    border-radius: 25px;
+    overflow: hidden; /* Corta el header para que encaje con las esquinas */
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+/* CORRECCIÓN DE LOGOS: Contenedor Blanco */
+.logos-container {
+    background-color: rgb(88, 19, 90); /* Obligatorio para que se vean los logos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    height: 90px; /* Altura fija para que no desaparezcan */
+    margin-bottom: 30px;
+}
+
+.logo-izq, .logo-der {
+    max-height: 70px; /* Tamaño máximo de la imagen */
+    max-width: 200px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* TEXTOS */
+.titulo-uni {
+    color: var(--magenta);
+    font-size: 1.5rem;
+    padding: 0 20px;
+    margin: 10px 0 0;
+    letter-spacing: 1px;
+}
+
+.subtitulo-fac {
+    color: var(--blanco);
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.divisor-magenta {
+    height: 3px;
+    width: 100px;
+    background-color: var(--magenta);
+    margin: 0 auto 30px;
+}
+
+.tag-materia {
+    color: var(--magenta);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.nombre-actividad {
+    font-size: 1.8rem;
+    margin-top: 0;
+    padding: 0 20px;
+}
+
+/* SECCIÓN DEL ALUMNO */
+.card-alumno {
+    background-color: var(--morado-claro);
+    margin: 30px 40px;
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+}
+
+.foto-perfil {
+    width: 130px;
+    height: 130px;
+    border-radius: 15px;
+    border: 3px solid var(--magenta);
+    object-fit: cover;
+    display: block;
+}
+
+.datos-personales p {
+    color: var(--blanco);
+    margin: 8px 0;
+    font-size: 1.05rem;
+}
+
+/* BOTÓN */
+.btn-principal {
+    display: inline-block;
+    background-color: var(--magenta);
+    color: white;
+    text-decoration: none;
+    padding: 18px 50px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-top: 10px;
+}
+
+.btn-principal:hover {
+    transform: scale(1.08);
+    background-color: #a338c2;
+    box-shadow: 0 10px 30px rgba(142, 36, 170, 0.5);
+}
