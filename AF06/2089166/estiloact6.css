@@ -1,0 +1,152 @@
+/* --- CONFIGURACIÓN BASE --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdf2f8; /* Rosa suave de fondo */
+    margin: 0;
+    padding: 20px;
+}
+
+/* --- PORTADA FORMAL NIVELADA --- */
+.portada {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    border-top: 8px solid #db2777; /* Rosa Fuerte */
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+    text-align: center;
+}
+
+.contenedor-logos {
+    display: flex;
+    justify-content: space-between; /* Logos a los extremos */
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+}
+
+.texto-portada {
+    margin-top: 75px;
+}
+
+.texto-portada h1 {
+    font-size: 1.4rem;
+    color: #9d174d; /* Rosa profundo */
+    margin: 0;
+}
+
+.texto-portada h2 {
+    font-size: 1.1rem;
+    color: #db2777; /* Rosa fuerte */
+    margin: 5px 0;
+}
+
+.datos-alumno {
+    margin-top: 30px;
+    border-top: 2px solid #fbcfe8;
+    padding-top: 20px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* --- SISTEMA DE PESTAÑAS --- */
+.contenedor-tabs {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.tabs-nav {
+    display: flex;
+    background: #fdf2f8;
+}
+
+.tab-link {
+    flex: 1;
+    padding: 18px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #db2777;
+    background: none;
+    transition: 0.3s;
+    border-bottom: 4px solid transparent;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+.tab-link:hover {
+    background-color: #fce7f3;
+}
+
+.tab-link.active {
+    background: #db2777;
+    color: white;
+}
+
+/* --- CONTENIDO DE VACANTES --- */
+.tab-content {
+    display: none;
+    padding: 40px;
+    animation: fadeIn 0.5s;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.info-card {
+    border-left: 6px solid #db2777;
+    padding-left: 25px;
+    line-height: 1.9;
+}
+
+.info-card h2 {
+    color: #9d174d;
+    margin-top: 0;
+}
+
+/* --- BOTÓN REGRESAR (NUEVO) --- */
+.navegacion-inferior {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #fbcfe8;
+    background-color: #fff;
+}
+
+.btn-regresar {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: transparent;
+    color: #db2777;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #db2777;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-regresar:hover {
+    background-color: #db2777;
+    color: white;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

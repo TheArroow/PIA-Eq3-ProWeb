@@ -1,0 +1,111 @@
+body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f0c29; /* Fondo oscuro base */
+        }
+
+        .hero-section {
+            /* Degradado de morado profundo a violeta */
+            background: linear-gradient(135deg, #240b36 0%, #632c9b 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Burbujas decorativas en tonos morados claros */
+        .shape {
+            position: absolute;
+            background: rgba(186, 104, 200, 0.2);
+            border-radius: 50%;
+            z-index: 1;
+            filter: blur(40px);
+        }
+        .shape-1 { width: 400px; height: 400px; top: -150px; left: -100px; }
+        .shape-2 { width: 300px; height: 300px; bottom: -100px; right: -50px; }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            max-width: 650px;
+            width: 90%;
+            text-align: center;
+            z-index: 10;
+            animation: fadeInScale 0.8s ease-out;
+        }
+
+        h1 {
+            color: #4a148c; /* Morado fuerte */
+            font-weight: 700;
+            margin-bottom: 5px;
+            font-size: 2.2rem;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            color: #9c27b0;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.85rem;
+        }
+
+        .intro-text {
+            background: #f3e5f5; /* Lila muy claro */
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 6px solid #7b1fa2; 
+            margin-bottom: 35px;
+            text-align: left;
+        }
+
+        .intro-text h2 {
+            font-size: 1.1rem;
+            color: #4a148c;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .intro-text p {
+            color: #444;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .btn-entrar {
+            display: inline-block;
+            background: #6a1b9a;
+            color: white;
+            padding: 16px 45px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(106, 27, 154, 0.2);
+        }
+
+        .btn-entrar:hover {
+            background: #4a148c;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(74, 20, 140, 0.3);
+            letter-spacing: 1px;
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .glass-card { padding: 30px 20px; }
+        }
+        
