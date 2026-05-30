@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Vacantes | Itzel Villarreal</title>
+    <link rel="stylesheet" href="estiloact6.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="portada">
+        <div class="contenedor-logos">
+            <img src="UANL.jpg" alt="Logo UANL" class="logo">
+            <img src="FIME.jpg" alt="Logo FIME" class="logo">
+        </div>
+        <div class="texto-portada">
+            <h1>UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN</h1>
+            <h2>FACULTAD DE INGENIERÍA MECÁNICA Y ELÉCTRICA</h2>
+            <br>
+            <h3>PROGRAMACIÓN WEB</h3>
+            <h4>Actividad 2</h4>
+            <p class="docente"><strong>DOCENTE:</strong> Lilia Lizeth Santos López</p>
+            
+            <div class="datos-alumno">
+                <p><strong>NOMBRE:</strong> Itzel Villarreal Arenas <span>|</span> <strong>MATRÍCULA:</strong> 2089166 <span>|</span> <strong>GRUPO:</strong> 008</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenedor-tabs">
+        <div class="tabs-nav">
+            <button class="tab-link active" onclick="openTab(event, 'Ternium')">TERNIUM</button>
+            <button class="tab-link" onclick="openTab(event, 'Softtek')">SOFTTEK</button>
+            <button class="tab-link" onclick="openTab(event, 'Accenture')">ACCENTURE</button>
+        </div>
+
+        <div id="Ternium" class="tab-content active">
+            <div class="info-card">
+                <h2>Ternium México</h2>
+                <p><strong>Vacante:</strong> Practicante de Sistemas y Automatización</p>
+                <p><strong>Ubicación:</strong> Centro Industrial Juan Khuen, Apodaca, N.L.</p>
+                <p><strong>Modalidad:</strong> Híbrido (Mañana)</p>
+                <p><strong>Apoyo Económico:</strong> $8,500 MXN mensuales</p>
+            </div>
+        </div>
+
+        <div id="Softtek" class="tab-content">
+            <div class="info-card">
+                <h2>Softtek</h2>
+                <p><strong>Vacante:</strong> Administrador de Sistemas Junior (Practicante)</p>
+                <p><strong>Ubicación:</strong> Parque PIIT, Apodaca, N.L.</p>
+                <p><strong>Modalidad:</strong> Presencial</p>
+                <p><strong>Apoyo Económico:</strong> $8,000 MXN mensuales</p>
+            </div>
+        </div>
+
+        <div id="Accenture" class="tab-content">
+            <div class="info-card">
+                <h2>Accenture</h2>
+                <p><strong>Vacante:</strong> Web Development Intern</p>
+                <p><strong>Ubicación:</strong> Santa María, Monterrey</p>
+                <p><strong>Modalidad:</strong> En línea</p>
+                <p><strong>Apoyo Económico:</strong> $9,000 MXN mensuales</p>
+            </div>
+        </div>
+
+        <div class="navegacion-inferior">
+            <a href="INDEX.html" class="btn-regresar">
+                <span class="flecha">←</span> Volver al Inicio
+            </a>
+        </div>
+    </main>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>

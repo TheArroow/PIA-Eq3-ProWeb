@@ -1,0 +1,517 @@
+<horarios_equipo_3> 
+    <integrante nombre="Omar Joaquín Sosa Moreno - 1997940">
+        <!--  Lunes  -->
+        <clase>
+            <dia>Lunes</dia>
+            <hora>5:00 pm a 5:50 pm</hora>
+            <materia>BASDAT</materia>
+            <clave>006</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>5:50 pm a 6:40 pm</hora>
+            <materia>ORGEMP</materia>
+            <clave>010</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>6:40 pm a 7:30 pm</hora>
+            <materia>INGECO</materia>
+            <clave>013</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>7:30 pm a 8:20 pm</hora>
+            <materia>OPTI</materia>
+            <clave>009</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>8:20 pm a 9:10 pm</hora>
+            <materia>PROWEB</materia>
+            <clave>008</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>9:10 pm a 10:00 pm</hora>
+            <materia>MATIV</materia>
+            <clave>051</clave>
+        </clase>
+        <!--  Martes  -->
+        <clase>
+            <dia>Martes</dia>
+            <hora>5:00 pm a 7:30 pm</hora>
+            <materia>ARQCOMP</materia>
+            <clave>010</clave>
+        </clase>
+        <clase>
+            <dia>Martes</dia>
+            <hora>7:30 pm a 8:20 pm</hora>
+            <materia>PROWEB (LAB)</materia>
+            <clave>218</clave>
+        </clase>
+
+        <!--  Miércoles  -->
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>5:00 pm a 5:50 pm</hora>
+            <materia>BASDAT</materia>
+            <clave>006</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>5:50 pm a 6:40 pm</hora>
+            <materia>ORGEMP</materia>
+            <clave>010</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>6:40 pm a 7:30 pm</hora>
+            <materia>INGECO</materia>
+            <clave>013</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>7:30 pm a 8:20 pm</hora>
+            <materia>OPTI</materia>
+            <clave>009</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>8:20 pm a 9:10 pm</hora>
+            <materia>PROWEB</materia>
+            <clave>008</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>9:10 pm a 10:00 pm</hora>
+            <materia>MATIV</materia>
+            <clave>051</clave>
+        </clase>
+
+        <!--  Viernes  -->
+        <clase>
+            <dia>Viernes</dia>
+            <hora>5:00 pm a 5:50 pm</hora>
+            <materia>BASDAT</materia>
+            <clave>006</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>5:50 pm a 6:40 pm</hora>
+            <materia>ORGEMP</materia>
+            <clave>010</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>6:40 pm a 7:30 pm</hora>
+            <materia>INGECO</materia>
+            <clave>013</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>7:30 pm a 8:20 pm</hora>
+            <materia>OPTI</materia>
+            <clave>009</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>8:20 pm a 9:10 pm</hora>
+            <materia>PROWEB</materia>
+            <clave>008</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>9:10 pm a 10:00 pm</hora>
+            <materia>MATIV</materia>
+            <clave>051</clave>
+        </clase>
+    </integrante>
+    <integrante nombre="Irvin Azael Garcia Avila - 2024394">
+
+        <!--  Lunes  -->
+        <clase>
+            <dia>Lunes</dia>
+            <hora>5:00 pm a 5:50 pm</hora>
+            <materia>TRANS</materia>
+            <clave>019</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>7:30 pm a 8:20 pm</hora>
+            <materia>BASDAT</materia>
+            <clave>007</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>8:20 pm a 9:10 pm</hora>
+            <materia>PROWEB</materia>
+            <clave>008</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>9:10 pm a 10:00 pm</hora>
+            <materia>OPTI</materia>
+            <clave>014</clave>
+        </clase>
+
+        <!--  Miércoles  -->
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>5:00 pm a 5:50 pm</hora>
+            <materia>TRANS</materia>
+            <clave>019</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>7:30 pm a 8:20 pm</hora>
+            <materia>BASDAT</materia>
+            <clave>007</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>8:20 pm a 9:10 pm</hora>
+            <materia>PROWEB</materia>
+            <clave>008</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>9:10 pm a 10:00 pm</hora>
+            <materia>OPTI</materia>
+            <clave>014</clave>
+        </clase>
+
+        <!--  Jueves  -->
+        <clase>
+            <dia>Jueves</dia>
+            <hora>4:10 pm a 5:00 pm</hora>
+            <materia>PROWEB (LAB)</materia>
+            <clave>416</clave>
+        </clase>
+        <clase>
+            <dia>Jueves</dia>
+            <hora>7:30 pm a 10:00 pm</hora>
+            <materia>LIDE</materia>
+            <clave>007</clave>
+        </clase>
+
+        <!--  Viernes  -->
+        <clase>
+            <dia>Viernes</dia>
+            <hora>5:00 pm a 5:50 pm</hora>
+            <materia>TRANS</materia>
+            <clave>019</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>7:30 pm a 8:20 pm</hora>
+            <materia>BASDAT</materia>
+            <clave>007</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>8:20 pm a 9:10 pm</hora>
+            <materia>PROWEB</materia>
+            <clave>008</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>9:10 pm a 10:00 pm</hora>
+            <materia>OPTI</materia>
+            <clave>014</clave>
+        </clase>
+
+        <!--  Sábado  -->
+        <clase>
+            <dia>Sábado</dia>
+            <hora>9:30 am a 12:00 am</hora>
+            <materia>ARQCOMP</materia>
+            <clave>001</clave>
+        </clase>
+        <clase>
+            <dia>Sábado</dia>
+            <hora>1:40 pm a 2:30 pm</hora>
+            <materia>TRANS (LAB)</materia>
+            <clave>605</clave>
+        </clase>
+        <clase>
+            <dia>Sábado</dia>
+            <hora>2:30 pm a 5:00 pm</hora>
+            <materia>MATIV</materia>
+            <clave>005</clave>
+        </clase>
+    </integrante>
+    <integrante nombre="Itzel Villarreal Arenas - 2089166">
+        <!--  Lunes  -->
+        <clase>
+            <dia>Lunes</dia>
+            <hora>5:00 pm a 5:50 pm</hora>
+            <materia>BASDAT</materia>
+            <clave>006</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>5:50 pm a 6:40 pm</hora>
+            <materia>ETICA</materia>
+            <clave>046</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>6:40 pm a 7:30 pm</hora>
+            <materia>DISSOFT</materia>
+            <clave>007</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>7:30 pm a 8:20 pm</hora>
+            <materia>APROY</materia>
+            <clave>006</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>8:20 pm a 9:10 pm</hora>
+            <materia>PROWEB</materia>
+            <clave>008</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>9:10 pm a 10:00 pm</hora>
+            <materia>REDCOM</materia>
+            <clave>007</clave>
+        </clase>
+        <!--  Martes  -->
+        <clase>
+            <dia>Martes</dia>
+            <hora>5:00 pm a 7:30 pm</hora>
+            <materia>LIDE</materia>
+            <clave>008</clave>
+        </clase>
+        <clase>
+            <dia>Martes</dia>
+            <hora>7:30 pm a 8:20 pm</hora>
+            <materia>PROWEB (LAB)</materia>
+            <clave>218</clave>
+        </clase>
+        <clase>
+            <dia>Martes</dia>
+            <hora>8:20 pm a 9:10 pm</hora>
+            <materia>REDCOM (LAB)</materia>
+            <clave>209</clave>
+        </clase>
+        <!--  Miércoles  -->
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>5:00 pm a 5:50 pm</hora>
+            <materia>BASDAT</materia>
+            <clave>006</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>5:50 pm a 6:40 pm</hora>
+            <materia>ETICA</materia>
+            <clave>046</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>6:40 pm a 7:30 pm</hora>
+            <materia>DISSOFT</materia>
+            <clave>007</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>7:30 pm a 8:20 pm</hora>
+            <materia>APROY</materia>
+            <clave>006</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>8:20 pm a 9:10 pm</hora>
+            <materia>PROWEB</materia>
+            <clave>008</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>9:10 pm a 10:00 pm</hora>
+            <materia>REDCOM</materia>
+            <clave>007</clave>
+        </clase>
+        <!--  Viernes  -->
+        <clase>
+            <dia>Viernes</dia>
+            <hora>5:00 pm a 5:50 pm</hora>
+            <materia>BASDAT</materia>
+            <clave>006</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>5:50 pm a 6:40 pm</hora>
+            <materia>ETICA</materia>
+            <clave>046</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>6:40 pm a 7:30 pm</hora>
+            <materia>DISSOFT</materia>
+            <clave>007</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>7:30 pm a 8:20 pm</hora>
+            <materia>APROY</materia>
+            <clave>006</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>8:20 pm a 9:10 pm</hora>
+            <materia>PROWEB</materia>
+            <clave>008</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>9:10 pm a 10:00 pm</hora>
+            <materia>REDCOM</materia>
+            <clave>007</clave>
+        </clase>
+    </integrante>
+    <integrante nombre="Benjamin Piña Rangel - 2051766">
+        <!-- Lunes -->
+        <clase>
+            <dia>Lunes</dia>
+            <hora>10:20 am a 11:10 am</hora>
+            <materia>PROEST</materia>
+            <clave>001</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>5:00 pm a 5:50 pm</hora>
+            <materia>TRANS</materia>
+            <clave>019</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>5:50 pm a 6:40 pm</hora>
+            <materia>ORGEMP</materia>
+            <clave>010</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>6:40 pm a 7:30 pm</hora>
+            <materia>DISSOFT</materia>
+            <clave>007</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>7:30 pm a 8:20 pm</hora>
+            <materia>APROY</materia>
+            <clave>006</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>8:20 pm a 9:10 pm</hora>
+            <materia>PROWEB</materia>
+            <clave>008</clave>
+        </clase>
+        <clase>
+            <dia>Lunes</dia>
+            <hora>9:10 pm a 10:00 pm</hora>
+            <materia>OPTI</materia>
+            <clave>014</clave>
+        </clase>
+
+        <!-- Martes -->
+        <clase>
+            <dia>Martes</dia>
+            <hora>5:00 pm a 7:30 pm</hora>
+            <materia>SISOP</materia>
+            <clave>170</clave>
+        </clase>
+
+        <!-- Miércoles -->
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>10:20 am a 11:10 am</hora>
+            <materia>PROEST</materia>
+            <clave>001</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>5:00 pm a 5:50 pm</hora>
+            <materia>TRANS</materia>
+            <clave>019</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>5:50 pm a 6:40 pm</hora>
+            <materia>ORGEMP</materia>
+            <clave>010</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>6:40 pm a 7:30 pm</hora>
+            <materia>DISSOFT</materia>
+            <clave>007</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>7:30 pm a 8:20 pm</hora>
+            <materia>APROY</materia>
+            <clave>006</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>8:20 pm a 9:10 pm</hora>
+            <materia>PROWEB</materia>
+            <clave>008</clave>
+        </clase>
+        <clase>
+            <dia>Miércoles</dia>
+            <hora>9:10 pm a 10:00 pm</hora>
+            <materia>OPTI</materia>
+            <clave>014</clave>
+        </clase>
+
+        <!-- Viernes -->
+        <clase>
+            <dia>Viernes</dia>
+            <hora>10:20 am a 11:10 am</hora>
+            <materia>PROEST</materia>
+            <clave>001</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>5:00 pm a 5:50 pm</hora>
+            <materia>TRANS</materia>
+            <clave>019</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>5:50 pm a 6:40 pm</hora>
+            <materia>ORGEMP</materia>
+            <clave>010</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>6:40 pm a 7:30 pm</hora>
+            <materia>DISSOFT</materia>
+            <clave>007</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>7:30 pm a 8:20 pm</hora>
+            <materia>APROY</materia>
+            <clave>006</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>8:20 pm a 9:10 pm</hora>
+            <materia>PROWEB</materia>
+            <clave>008</clave>
+        </clase>
+        <clase>
+            <dia>Viernes</dia>
+            <hora>9:10 pm a 10:00 pm</hora>
+            <materia>OPTI</materia>
+            <clave>014</clave>
+        </clase>
+    </integrante>
+</horarios_equipo_3>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Actividad 5 | 6to Semestre | Web Moderna</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="glass-container">
+    <div class="content-wrapper">
+      <h1><i class="fas fa-laptop-code"></i> Actividad 5 · 6to Semestre · IAS</h1>
+      <hr>
+
+      <div class="tabs-modern" id="tabsContainer">
+        <button class="tab-btn active" data-tab="portada"><i class="fas fa-id-card"></i><span
+            class="label">Portada</span></button>
+        <button class="tab-btn" data-tab="horario"><i class="fas fa-calendar-week"></i><span
+            class="label">Horario</span></button>
+        <button class="tab-btn" data-tab="proest"><i class="fas fa-code-branch"></i><span
+            class="label">PROEST</span></button>
+        <button class="tab-btn" data-tab="orgemp"><i class="fas fa-building"></i><span
+            class="label">ORGEMP</span></button>
+        <button class="tab-btn" data-tab="opti"><i class="fas fa-chart-line"></i><span
+            class="label">OPTI</span></button>
+        <button class="tab-btn" data-tab="proweb"><i class="fas fa-globe"></i><span class="label">PROWEB</span></button>
+        <button class="tab-btn" data-tab="trans"><i class="fas fa-network-wired"></i><span
+            class="label">TRANS</span></button>
+        <button class="tab-btn" data-tab="dissoft"><i class="fas fa-cubes"></i><span
+            class="label">DISSOFT</span></button>
+        <button class="tab-btn" data-tab="sisop"><i class="fas fa-microchip"></i><span
+            class="label">SISOP</span></button>
+        <button class="tab-btn" data-tab="aproy"><i class="fas fa-project-diagram"></i><span
+            class="label">APROY</span></button>
+      </div>
+
+      <div class="tab-contents">
+        <div id="portada" class="tab-content active">
+          <div class="card-modern">
+            <div class="portada-flex">
+              <div class="logo-group">
+                <img src="uanl.png" alt="UANL" onerror="this.src='https://placehold.co/100x80?text=UANL'">
+                <img src="fimelogo.jpg" alt="FIME" onerror="this.src='https://placehold.co/100x80?text=FIME'">
+              </div>
+              <div><span class="badge-accent"><i class="far fa-calendar-alt"></i> Enero - Junio 2026</span></div>
+            </div>
+
+            <div style="text-align: center; margin: 1rem 0 0.5rem;">
+              <h2 style="color:#0a3b5a;">UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN</h2>
+              <h3 style="font-weight: 600;">FIME · Programación Web</h3>
+              <p>Docente: Lilia Lizeth Santos López | Actividad 5 | Grupo 008 · IAS</p>
+            </div>
+            <div class="student-info">
+              <div class="info-details">
+                <h2>Benjamín Piña Rangel</h2>
+                <p><strong>Matrícula:</strong> 2051766 &nbsp;|&nbsp; <strong>Carrera:</strong> Ing. Administrador De
+                  Sistemas &nbsp;|&nbsp; <strong>Plan de Estudio:</strong> 401</p>
+                <p><strong>DOCENTE: Lilia Lizeth Santos López</strong> ACTIVIDAD 6 &nbsp;| &nbsp;
+                  <strong>Grupo:</strong> 001</p>
+              </div>
+              <img src="perfil.png" alt="Foto de perfil - Benjamín Piña Rangel" class="student-photo">
+            </div>
+            <div style="margin-top: 1.5rem; text-align: center;">
+              <button id="btnAlertaPortada" class="btn-soft"><i class="fas fa-bell"></i> Mostrar Alerta de
+                Bienvenida</button>
+            </div>
+            <p
+              style="margin-top: 1rem; background: #e9f2fa; border-radius: 1.5rem; padding: 0.8rem; text-align: center; font-size: 0.9rem;">
+              <i class="fas fa-magic"></i> Interfaz dinámica con pestañas, horario inteligente y contenido multimedia
+              por materia.
+            </p>
+          </div>
+        </div>
+
+        <div id="horario" class="tab-content">
+          <div class="card-modern">
+            <h3><i class="fas fa-table-list"></i> Horario de Clases · Enero-Junio 2026</h3>
+            <p><strong>Alumno:</strong> 2051766 Piña Rangel Benjamin · IAS · Plan 401 · Tutor: --- | Consulta:
+              05/01/2026</p>
+            <div class="table-responsive">
+              <table class="horario-table" id="horarioTabla">
+                <thead>
+                  <tr>
+                    <th>Hora</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10:20 - 11:10</td>
+                    <td class="materia-cell">PROEST<br>001/1102</td>
+                    <td>-</td>
+                    <td class="materia-cell">PROEST<br>001/1102</td>
+                    <td>-</td>
+                    <td class="materia-cell">PROEST<br>001/1102</td>
+                  </tr>
+                  <tr>
+                    <td>5:00 - 5:50 pm</td>
+                    <td>TRANS<br>019/CIS1</td>
+                    <td>SISOP<br>170/9302</td>
+                    <td>TRANS<br>019/CIS1</td>
+                    <td>-</td>
+                    <td>TRANS<br>019/CIS1</td>
+                  </tr>
+                  <tr>
+                    <td>5:50 - 6:40 pm</td>
+                    <td>ORGEMP<br>010/2203</td>
+                    <td>SISOP<br>170/9302</td>
+                    <td>ORGEMP<br>010/2203</td>
+                    <td>-</td>
+                    <td>ORGEMP<br>010/2203</td>
+                  </tr>
+                  <tr>
+                    <td>6:40 - 7:30 pm</td>
+                    <td>DISSOFT<br>007/4204</td>
+                    <td>SISOP<br>170/9302</td>
+                    <td>DISSOFT<br>007/4204</td>
+                    <td>-</td>
+                    <td>DISSOFT<br>007/4204</td>
+                  </tr>
+                  <tr>
+                    <td>7:30 - 8:20 pm</td>
+                    <td>APROY<br>006/9105</td>
+                    <td>-</td>
+                    <td>APROY<br>006/9105</td>
+                    <td>-</td>
+                    <td>APROY<br>006/9105</td>
+                  </tr>
+                  <tr>
+                    <td>8:20 - 9:10 pm</td>
+                    <td>PROWEB<br>008/4200</td>
+                    <td>-</td>
+                    <td>PROWEB<br>008/4200</td>
+                    <td>-</td>
+                    <td>PROWEB<br>008/4200</td>
+                  </tr>
+                  <tr>
+                    <td>9:10 - 10:00 pm</td>
+                    <td>OPTI<br>014/1105</td>
+                    <td>-</td>
+                    <td>OPTI<br>014/1105</td>
+                    <td>-</td>
+                    <td>OPTI<br>014/1105</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <button id="resaltarHoyBtn" class="btn-soft"><i class="fas fa-highlighter"></i> Resaltar día
+                actual</button>
+              <button id="reiniciarTabla" class="btn-soft"><i class="fas fa-eraser"></i> Quitar resaltado</button>
+            </div>
+            <div style="margin-top: 1.8rem; background:#eef3fa; border-radius: 1.2rem; padding: 1rem;">
+              <h4><i class="fas fa-chart-simple"></i> Nomenclatura y total de horas</h4>
+              <p> Presenciales: 24h | Asíncronas: 4h | Total: 28h | Materias: PROEST, ORGEMP, OPTI, PROWEB, TRANS,
+                DISSOFT, SISOP, APROY</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="proest" class="tab-content">
+          <div class="card-modern">
+            <h2><i class="fas fa-code-branch"></i> Programación de Estructuras de Datos (PROEST)</h2>
+            <div class="materia-grid">
+              <div class="info-card"><i class="fas fa-clock"></i> <strong>Frecuencia:</strong> 3h (Lun, Mié, Vie
+                10:20-11:10)<br> Salón: 001/1102</div>
+              <div class="info-card"><i class="fas fa-brain"></i> <strong>Temas:</strong> Pilas, colas, árboles, grafos,
+                algoritmos de ordenamiento.</div>
+              <div class="info-card"><i class="fas fa-tasks"></i> <strong>Acts Fund.:</strong> Implementación en C++,
+                proyecto final con estructuras dinámicas.</div>
+            </div><img class="img-place"
+              src="https://placehold.co/900x200/1A4A6E/white?text=Estructuras+de+Datos+Visual" alt="estructuras"><iframe
+              src="https://www.youtube.com/embed/RBSGKlAvoiM" title="EDD" allowfullscreen></iframe>
+            <p><i class="fas fa-link"></i> <a href="https://www.geeksforgeeks.org/data-structures/" target="_blank"> Más
+                información estructuras de datos</a></p>
+            <div class="nav-materias"><button class="nav-btn-grad" data-nav="portada"><i class="fas fa-home"></i>
+                Index</button><button class="nav-btn-grad" data-nav="orgemp"><i class="fas fa-arrow-right"></i>
+                Siguiente: ORGEMP</button></div>
+          </div>
+        </div>
+        <div id="orgemp" class="tab-content">
+          <div class="card-modern">
+            <h2><i class="fas fa-building"></i> Organización Empresarial</h2>
+            <div class="materia-grid">
+              <div class="info-card"><strong> Frecuencia:</strong> Lun, Mié, Vie 5:50-6:40pm · Salón 010/2203</div>
+              <div class="info-card"><strong> Temas:</strong> Cultura organizacional, liderazgo, estructuras y procesos.
+              </div>
+              <div class="info-card"><strong> Act. Fund.:</strong> Diagnóstico empresarial, análisis de casos reales.
+              </div>
+            </div><iframe src="https://www.youtube.com/embed/eVccaBgOUiE" title="Org empresarial"
+              allowfullscreen></iframe>
+            <p><a href="https://www.gestiopolis.com/que-es-organizacion-empresarial/" target="_blank"> Ampliar
+                conceptos</a></p>
+            <div class="nav-materias"><button class="nav-btn-grad" data-nav="proest"><i class="fas fa-arrow-left"></i>
+                Anterior</button><button class="nav-btn-grad" data-nav="portada"> Index</button><button
+                class="nav-btn-grad" data-nav="opti">Siguiente: OPTI →</button></div>
+          </div>
+        </div>
+        <div id="opti" class="tab-content">
+          <div class="card-modern">
+            <h2><i class="fas fa-chart-line"></i> Optimización (OPTI)</h2>
+            <div class="materia-grid">
+              <div class="info-card"> Frec: Lun, Mié, Vie 9:10-10pm | Salón 014/1105</div>
+              <div class="info-card"> Temas: Programación lineal, método simplex, optimización de recursos.</div>
+              <div class="info-card"> Act. Fund.: Resolver modelos con software especializado.</div>
+            </div><iframe src="https://www.youtube.com/embed/kk_sgSo_uds" title="Optimización" allowfullscreen></iframe>
+            <p><a
+                href="https://www.ingenieriaindustrialonline.com/herramientas-para-el-ingeniero-industrial/investigacion-de-operaciones/programacion-lineal/"
+                target="_blank"> Enlace a teoría de optimización</a></p>
+            <div class="nav-materias"><button class="nav-btn-grad" data-nav="orgemp">← Anterior</button><button
+                class="nav-btn-grad" data-nav="portada">Inicio</button><button class="nav-btn-grad"
+                data-nav="proweb">Siguiente: PROWEB →</button></div>
+          </div>
+        </div>
+        <div id="proweb" class="tab-content">
+          <div class="card-modern">
+            <h2><i class="fas fa-globe"></i> Programación Web + Laboratorio</h2>
+            <div class="materia-grid">
+              <div class="info-card"> Frec: Lun, Mié, Vie 8:20-9:10pm · Salón 008/4200 + Lab asíncrono.</div>
+              <div class="info-card"> Temas: HTML5, CSS3, JS, React, Node.js, despliegue.</div>
+              <div class="info-card"> Act. Fund.: Desarrollo de sitio completo (esta misma actividad web).</div>
+            </div><iframe src="https://www.youtube.com/embed/6tfgKv93C_Q" title="Curso web" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/6tfgKv93C_Q" title="Laboratorio Programación Web"
+              allowfullscreen></iframe>
+            <p><a href="https://developer.mozilla.org/es/" target="_blank"> MDN Web Docs (recurso oficial)</a></p>
+            <div class="nav-materias"><button class="nav-btn-grad" data-nav="opti">← Anterior</button><button
+                class="nav-btn-grad" data-nav="portada">Index</button><button class="nav-btn-grad"
+                data-nav="trans">Siguiente: TRANS →</button></div>
+          </div>
+        </div>
+        <div id="trans" class="tab-content">
+          <div class="card-modern">
+            <h2><i class="fas fa-network-wired"></i> Transmisión y Comunicación de Datos</h2>
+            <div class="materia-grid">
+              <div class="info-card"> Horario: Lun, Mié, Vie 5:00-5:50pm · Salón 019/CIS1</div>
+              <div class="info-card"> Temas: Modelo OSI/TCP/IP, medios guiados/no guiados.</div>
+              <div class="info-card"> Actividades: Simulación Packet Tracer, configuración redes.</div>
+            </div><iframe src="https://www.youtube.com/embed/2Wo0qBb-ujw" title="Comunicación de datos"
+              allowfullscreen></iframe>
+            <p><a href="https://www.cisco.com/c/es_mx/solutions/enterprise-networks/what-is-computer-networking.html"
+                target="_blank"> Cisco Networking</a></p>
+            <div class="nav-materias"><button class="nav-btn-grad" data-nav="proweb">← Anterior</button><button
+                class="nav-btn-grad" data-nav="portada"> Inicio</button><button class="nav-btn-grad"
+                data-nav="dissoft">Siguiente: DISSOFT →</button></div>
+          </div>
+        </div>
+        <div id="dissoft" class="tab-content">
+          <div class="card-modern">
+            <h2><i class="fas fa-cubes"></i> Diseño y Especificación de Software</h2>
+            <div class="materia-grid">
+              <div class="info-card"> Lun, Mié, Vie 6:40-7:30pm · 007/4204</div>
+              <div class="info-card"> Temas: UML, patrones de diseño, arquitectura limpia.</div>
+              <div class="info-card"> Act. Fund.: Documento de especificación de requisitos.</div>
+            </div><iframe src="https://www.youtube.com/embed/nqPzNS-pARY" title="Diseño software"
+              allowfullscreen></iframe>
+            <p><a href="https://www.uml.org/" target="_blank"> UML Resource</a></p>
+            <div class="nav-materias"><button class="nav-btn-grad" data-nav="trans">← Anterior</button><button
+                class="nav-btn-grad" data-nav="portada">Index</button><button class="nav-btn-grad"
+                data-nav="sisop">Siguiente: SISOP →</button></div>
+          </div>
+        </div>
+        <div id="sisop" class="tab-content">
+          <div class="card-modern">
+            <h2><i class="fas fa-microchip"></i> Sistemas Operativos</h2>
+            <div class="materia-grid">
+              <div class="info-card"> Martes 5:00-7:30pm (bloque de 3h) · Salón 170/9302</div>
+              <div class="info-card"> Temas: Planificación, memoria, sistemas de archivos.</div>
+              <div class="info-card"> Act. Fund.: Simulador de procesos, scripts en Linux.</div>
+            </div><iframe src="https://www.youtube.com/embed/26QPDBe-NB8" title="Sistemas Operativos"
+              allowfullscreen></iframe>
+            <p><a href="https://www.geeksforgeeks.org/operating-systems/" target="_blank"> GeeksforGeeks SO</a></p>
+            <div class="nav-materias"><button class="nav-btn-grad" data-nav="dissoft">← Anterior</button><button
+                class="nav-btn-grad" data-nav="portada">Inicio</button><button class="nav-btn-grad"
+                data-nav="aproy">Siguiente: APROY →</button></div>
+          </div>
+        </div>
+        <div id="aproy" class="tab-content">
+          <div class="card-modern">
+            <h2><i class="fas fa-project-diagram"></i> Administración de Proyectos de Software</h2>
+            <div class="materia-grid">
+              <div class="info-card"> Lun, Mié, Vie 7:30-8:20pm · Salón 006/9105</div>
+              <div class="info-card"> Temas: Scrum, Kanban, gestión de riesgos, Jira.</div>
+              <div class="info-card"> Act. Fund.: Plan de proyecto real, simulación agile.</div>
+            </div><iframe src="https://www.youtube.com/embed/uxlOPJC3NzY" title="Gestión de proyectos"
+              allowfullscreen></iframe>
+            <p><a href="https://www.pmi.org/" target="_blank"> Project Management Institute</a></p>
+            <div class="nav-materias"><button class="nav-btn-grad" data-nav="sisop">← Anterior</button><button
+                class="nav-btn-grad" data-nav="portada"> Index</button><button class="nav-btn-grad"
+                data-nav="proest">Primera Materia</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
